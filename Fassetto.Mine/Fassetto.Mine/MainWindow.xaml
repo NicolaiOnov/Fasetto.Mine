@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fassetto.Mine"
+        xmlns:valueConverters="clr-namespace:Fassetto.Mine.ValueConverters"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={valueConverters:ApplicationPageConverter}}"/>
     </Grid>
 </Window>
