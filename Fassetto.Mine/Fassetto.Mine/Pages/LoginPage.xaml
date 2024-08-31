@@ -7,8 +7,70 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoginPage">
+    <Page.Resources>
+        
+    </Page.Resources>
+   
 
-    <Grid>
-        <Button Content="Login"/>
-    </Grid>
+    <Border Background="{StaticResource WordBlueBrush}">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="/Resources/Images/Backgrounds/emoji-background.png"/>
+            </Grid.Background>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" TextBlock.TextAlignment="Center">
+                    <Border 
+                        Width="350px" 
+                        CornerRadius="20" 
+                        Background="{StaticResource ForegroundLightBrush}"
+                        Padding="10 30 10 10">
+                        <StackPanel>
+                            <TextBlock
+                                Foreground="{StaticResource WordBlueBrush}"
+                                FontSize="{StaticResource FontSizeLarge}"
+                                >
+                                Sign Up
+                            </TextBlock>
+
+                            <TextBlock
+                                Foreground="{StaticResource ForegroundDarkBrush}"
+                                FontSize="{StaticResource FontSizeSmall}"
+                                >
+                                It's about to get fun
+                            </TextBlock>
+
+                            <TextBox 
+                                Style="{StaticResource FormTextBlock}"
+                                HorizontalAlignment="Center"
+                                Tag="Email"
+                                >
+                            </TextBox>
+                            <TextBox
+                                Style="{StaticResource FormTextBlock}"
+                                HorizontalAlignment="Center"
+                                Tag="Password"
+                                >
+                                Password
+                            </TextBox>
+
+                            <Button
+                                HorizontalAlignment="Center"
+                                >
+                                Log in
+                            </Button>
+
+                        </StackPanel>
+                    </Border>
+
+                    <Button
+                        Style="{StaticResource TextButton}"
+                        HorizontalAlignment="Center"
+                        >
+                        I already have an account
+                    </Button>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Border>
 </Page>
